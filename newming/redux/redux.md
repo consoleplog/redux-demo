@@ -189,25 +189,8 @@ const mapStateToProps =(state)=>({comments:state})
 
 import { connect } form 'react-redux'
 
-const mapStateToProps =(所有数据state)=>(定义部分数据在子组建内部名称 comments:state.xxx)
+const mapStateToProps =(所有数据store)=>(定义部分数据在子组建内部名称 comments:state.xxx)
 
 export default connect(数据筛选mapStateToProps)(组建导出:PostBody)
 
 子组建 获取交互数据 为 {this.props.comments.xxxx}
-
-
-state
-up
-```
-let pureRender = ()=>{
-  ReactDOM.render(<App />,document.getElementById('root')
-}
-
-pureRender()
-
-store.subscribe(pureRender)
-```
-sanbupanduan
-```
-this.state.num ? 'dui' : 'cuo'
-```

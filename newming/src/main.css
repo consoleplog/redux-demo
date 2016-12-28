@@ -1,0 +1,46 @@
+body{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+
+ .cf:after {
+     clear: both;
+ }
+.top{
+  height:600px;
+  background-color: #ccc;
+
+}
+.bottom{
+  height:600px;
+  background-color: teal;
+}
+.postbody, .pinglun{
+  background-color: #fff;
+  width: 600px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  margin: 60px auto;
+}
+.postbody {
+  position: relative;
+}
+.postbody .comment-num{
+ position: absolute;
+ right: 20px;
+ font-weight: bold;
+ bottom: 20px;
+ width: 80px;
+ height: 45px;
+ line-height: 45px;
+ text-align: center;
+ background-color: rgb(242, 244, 246);
+ color: rgb(76, 87, 101);
+}

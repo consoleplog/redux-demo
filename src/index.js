@@ -6,4 +6,4 @@ import Abb from './components/Abb.js'
 
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<Abb />, document.getElementById('app'));
