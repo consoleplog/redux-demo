@@ -162,7 +162,7 @@ const mapStateToProps =(state)=>({comments:state})
 只有 connect 是不能工作的  需要 <Provider> </Provider> 包裹起来
 
 ```
- import { provider } form 'react-redux'
+ import { Provider } form 'react-redux'
 
 所链接区域组建之间
 <Provider store={store}>
@@ -177,3 +177,20 @@ const mapStateToProps =(state)=>({comments:state})
 </Provider>
 
 ```
+
+规定范围
+ import { Provider } form 'react-redux'
+
+ <Provider store={store}> </Provider>
+
+ import store form './...'
+
+子组建 建立链接
+
+import { connect } form 'react-redux'
+
+const mapStateToProps =(所有数据store)=>(定义部分数据在子组建内部名称 comments:state.xxx)
+
+export default connect(数据筛选mapStateToProps)(组建导出:PostBody)
+
+子组建 获取交互数据 为 {this.props.comments.xxxx}

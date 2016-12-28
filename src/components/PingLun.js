@@ -18,10 +18,15 @@ class PingLun extends React.Component {
     // this.setState({
     // data:this.state.data
     // })
-    store.dispatch({type:'asd',data1:{autor,content}})
-    // console.log(store.getState());
-    this.setState({data:store.getState()})
-    this.refs.tform.reset();
+    if(autor!=''&&content!=''){
+      store.dispatch({type:'asd',data1:{autor,content}})
+      // console.log(store.getState());
+      this.setState({data:store.getState()})
+      this.refs.tform.reset();
+    }else{
+      alert('不能为空')
+    }
+
   }
   render () {
   let list=this.state.data.map((item,i) =>(<div key={i}><h3>{item.autor}</h3><p>{item.content}</p></div>))
