@@ -97,3 +97,83 @@ constructor(){
   }
 }
 ```
+
+
+store.dispatch(action) 用户端
+
+store.js 里面
+
+function commentReducer(state = [], action) {
+  switch(action.type){
+    case 'asd':
+    return [...state,action.data1]
+    default:
+    return state;
+  }
+}
+
+
+let m1 =['asd','bnn']
+
+let com='asd1'
+
+[...m1,com]=m1.push(com)//['asd','bnn','asd1']
+
+数据交互
+
+### React-redux
+
+概念
+store 和组建
+联系两者 动态链接所用的
+
+
+
+
+```
+npm i --save react-redux
+```
+
+
+```
+import { connect } from 'react-redux'
+
+export default connect(mapStateToProps)(子组建名//PostBody)
+
+倒出     默认      链接    （映射 为当前组建的属性）
+
+
+
+
+connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])
+
+
+筛选内容
+
+const mapStateToProps =(state)=>({comments:state})
+
+映射完成以后  子组建 PostBody 之中 会有个属性  this.props.comments.length
+
+
+```
+
+### Provider
+
+只有 connect 是不能工作的  需要 <Provider> </Provider> 包裹起来
+
+```
+ import { provider } form 'react-redux'
+
+所链接区域组建之间
+<Provider store={store}>
+  <div>
+    <div className='top cf'>
+      <PostBody />
+    </div>
+    <div className='bottom cf'>
+      <PingLun />
+    </div>
+  </div>  
+</Provider>
+
+```

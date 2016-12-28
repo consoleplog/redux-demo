@@ -16,7 +16,6 @@ function commentReducer(state = [], action) {
 }
 
 
-
 let store = createStore(commentReducer, comments);
 
 export default store;
